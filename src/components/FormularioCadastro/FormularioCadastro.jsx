@@ -1,5 +1,4 @@
-import {React, useState} from 'react';
-import { Typography } from '@material-ui/core'
+import React, { useEffect, useState } from 'react';
 import DadosPessoais from './DadosPessoais';
 import DadosUsuario from './DadosUsuario';
 import DadosEntrega from './DadosEntrega';
@@ -8,27 +7,30 @@ import DadosEntrega from './DadosEntrega';
 function FormularioCadastro({ aoEnviar, validarCPF }) {
 
     const [etapaAtual, setEtapaAtual] = useState(0);
+    const [dadosColetados, setDados] = useState({});
+
+    useEffect(() => {
+        console.log(dadosColetados)
+    })
+
+    const formularios = [
+        <DadosUsuario aoEnviar={coletarDados} />,
+        <DadosPessoais aoEnviar={coletarDados} validarCPF={validarCPF} />,
+        <DadosEntrega aoEnviar={coletarDados} />
+    ];
 
     function proximo() {
         setEtapaAtual(etapaAtual + 1);
     }
 
-    function formularioAtual(etapa) {
-        switch (etapa) {
-            case 0:
-                return <DadosUsuario aoEnviar={proximo} />;
-            case 1:
-                return <DadosPessoais aoEnviar={proximo} validarCPF={validarCPF} />;
-            case 2:
-                return <DadosEntrega aoEnviar={aoEnviar} />;
-            default:
-                return <Typography>Erro ao selecionar Formulário</Typography>
-        }
+    function coletarDados(dados) {
+        setDados = ({ ...dadosColetados, ...dados })
+        proximo();
     }
 
     return (
         <>
-            {formularioAtual(etapaAtual)}
+            {formularios[etapaAtual]}
         </>
     );
 

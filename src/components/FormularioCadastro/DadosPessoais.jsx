@@ -17,7 +17,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
         <form
             onSubmit={(event => {
                 event.preventDefault();
-                aoEnviar();
+                aoEnviar({nome, sobrenome, cpf, novidades, promocoes});
             })}
         >
             <TextField
