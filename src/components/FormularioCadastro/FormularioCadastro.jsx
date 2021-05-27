@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DadosPessoais from './DadosPessoais';
 import DadosUsuario from './DadosUsuario';
 import DadosEntrega from './DadosEntrega';
-import { Stepper, Typography } from '@material-ui/core';
+import { Stepper, Typography, Step, StepLabel } from '@material-ui/core';
 
 //As funções renderizam o retorno 
 function FormularioCadastro({ aoEnviar, validarCPF }) {
