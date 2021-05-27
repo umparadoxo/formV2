@@ -17,10 +17,11 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
         <form
             onSubmit={(event => {
                 event.preventDefault();
-                aoEnviar({ nome, sobrenome, cpf, novidades, promocoes });
+                aoEnviar();
             })}
         >
             <TextField
+                required
                 value={nome}
                 onChange={(event) => {
                     setNome(event.target.value);
@@ -33,6 +34,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
             />
 
             <TextField
+                required
                 value={sobrenome}
                 onChange={(event) => {
                     setSobrenome(event.target.value);
@@ -45,6 +47,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
             />
 
             <TextField
+                required
                 value={cpf}
                 onChange={(event) => {
                     setCpf(event.target.value);
@@ -82,7 +85,7 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
                     <Switch
                         onChange={event => {
                             setNovidades(event.target.checked)
-                            }
+                        }
                         }
                         name='novidades'
                         color='primary'
@@ -91,10 +94,10 @@ function DadosPessoais({ aoEnviar, validarCPF }) {
             />
 
             <Button
-            variant='contained'
-            color='primary'
-            type='submit'>
-                Cadastrar
+                variant='contained'
+                color='primary'
+                type='submit'>
+                Próximo
             </Button>
         </form>
     )

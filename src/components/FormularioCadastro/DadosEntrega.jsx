@@ -5,6 +5,7 @@ function DadosEntrega() {
     return (
         <form>
             <TextField
+                required
                 id='cep'
                 label='CEP'
                 type='number'
@@ -13,6 +14,7 @@ function DadosEntrega() {
             />
 
             <TextField
+                required
                 id='endereco'
                 label='Endereço'
                 type='text'
@@ -22,6 +24,7 @@ function DadosEntrega() {
             />
 
             <TextField
+                required
                 id='numero'
                 label='Número'
                 type='number'
@@ -30,6 +33,7 @@ function DadosEntrega() {
             />
 
             <TextField
+                required
                 id='estado'
                 label='Estado'
                 type='text'
@@ -38,6 +42,7 @@ function DadosEntrega() {
             />
 
             <TextField
+                required
                 id='cidade'
                 label='Cidade'
                 type='text'

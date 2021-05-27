@@ -5,8 +5,12 @@ function DadosUsuario() {
 
     return (
 
-        <form>
+        <form onSubmit={(event) => {
+            event.preventDefault();
+            aoEnviar();
+        }}>
             <TextField
+                required
                 id='email'
                 label='Email'
                 type='email'
@@ -16,6 +20,7 @@ function DadosUsuario() {
             />
 
             <TextField
+                required
                 id='senha'
                 label='Senha'
                 type='password'
@@ -28,7 +33,7 @@ function DadosUsuario() {
                 variant='contained'
                 color='primary'
             >
-                Cadastrar
+                Próximo
             </Button>
         </form>
 
