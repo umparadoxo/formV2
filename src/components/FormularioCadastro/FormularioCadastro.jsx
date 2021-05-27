@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { DadosPessoais } from './DadosPessoais';
-import { DadosUsuario } from './DadosUsuario';
+import { DadosPessoais } from '../FormularioCadastro/DadosPessoais';
+import { DadosUsuario } from '../FormularioCadastro/DadosUsuario';
 
 //As funções renderizam o retorno 
 function FormularioCadastro({ aoEnviar, validarCPF }) {
