@@ -24,7 +24,7 @@ function FormularioCadastro({ aoEnviar, validarCPF }) {
     }
 
     function coletarDados(dados) {
-        setDados = ({ ...dadosColetados, ...dados })
+        setDados ({ ...dadosColetados, ...dados })
         proximo();
     }
 
