@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Button, TextField, Switch, FormControlLabel } from '@material-ui/core'
 import ValidacoesCadastro from '../../contexts/ValidacoesCadastro'
+import useErros from '../../contexts/useErros';
 
 //As funções renderizam o retorno 
 function DadosPessoais({ aoEnviar }) {

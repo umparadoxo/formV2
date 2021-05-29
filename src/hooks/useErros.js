@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 function useErros(validacoes) {
     const estadoInicial = criarEstadoInicial(validacoes);
-
     const [erros, setErros] = useState(estadoInicial);
 
     function validarCampos(event) {
@@ -32,4 +31,4 @@ function criarEstadoInicial(validacoes) {
     return estadoInicial
 }
 
-export default UseErros;
+export default useErros;
