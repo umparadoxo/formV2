@@ -6,6 +6,7 @@ function DadosUsuario({ aoEnviar, validacoes }) {
     const [senha, setSenha] = useState('');
     const [email, setEmail] = useState('');
     const [erros, setErros] = useState({ senha: { valido: true, texto: '' } });
+  
     function validarCampos(event) {
         const { name, value } = event.target;
         const novoEstado = { ...erros }
