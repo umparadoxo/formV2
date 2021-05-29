@@ -61,9 +61,6 @@ function DadosPessoais({ aoEnviar, validacoes }) {
                 onChange={(event) => {
                     setSobrenome(event.target.value);
                 }}
-                onBlur={validarCampos}
-                error={!erros.nome.valido}
-                helperText={erros.nome.texto}
                 variant='outlined'
                 id='sobrenome'
                 name='sobrenome'
