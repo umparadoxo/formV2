@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button, TextField, Switch, FormControlLabel } from '@material-ui/core'
+import ValidacoesCadastro from '../../contexts/ValidacoesCadastro'
 
 //As funções renderizam o retorno 
-function DadosPessoais({ aoEnviar, validacoes }) {
+function DadosPessoais({ aoEnviar }) {
 
     //Hooks para gerenciar o estado das variáveis inseridas no formulário
     const [nome, setNome] = useState('');
@@ -11,7 +12,7 @@ function DadosPessoais({ aoEnviar, validacoes }) {
     const [promocoes, setPromocoes] = useState(true);
     const [novidades, setNovidades] = useState(true);
     const [erros, setErros] = useState({ cpf: { valido: true, texto: '' }, nome: { valido: true, texto: '' } });
-
+    const validacoes = useContext(ValidacoesCadastro);
 
     function validarCampos(event) {
         const { name, value } = event.target;

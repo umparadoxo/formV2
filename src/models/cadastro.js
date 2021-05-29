@@ -15,7 +15,7 @@ function validarSenha(senha) {
 }
 
 function validarNome(nome) {
-    if (nome.length < 3 || nome.length > 20) {
+    if (nome.length < 3 ) {
         return { valido: false, texto: 'O nome precisa ser maior' }
     } else {
         return { valido: true, texto: '' }
